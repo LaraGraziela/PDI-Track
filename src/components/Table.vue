@@ -1,46 +1,85 @@
 <template>
-    <div class="tabela">
-        <h1>Customers Cadastrados</h1>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="container">
+                    <h1 class="tituloTable">Customers Cadastrados</h1>
 
-        <table style="width:100%">
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>CPF</th>
-                <th>Data de nascimento</th>
-                <th>Cargo</th>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Lara</td>
-                <td>Smith</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Eve</td>
-                <td>Jackson</td>
-                <td>94</td>
-            </tr>
-        </table>
-  
-    </div>
+                    <table class="tabela table-bordered formulario" style="width:100%">
+                        <thead>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Adress</th>
+                            <th>Phone</th>
+                            <th>Website</th>
+                            <th>Company</th>
+                        </thead>
+                        <thead v-for="(user,index) in usuarios" :key="index">
+                            <td></td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.username}}</td>
+                            <td>{{user.email}}</td>
+                            <td>
+                                Street: {{user.address.street}} <br>
+                                Suite: {{user.address.suite}}<br>
+                                City: {{user.address.city}}<br>
+                                Zipcode: {{user.address.zipcode}}<br>                  
+                            </td>
+                            <td>{{user.phone}}</td>
+                            <td>{{user.website}}</td>
+                            <td>Name: {{user.company.name}} <br>
+                                CatchPhrase: {{user.company.catchPhrase}} <br>
+                                
+                            </td>
+                        </thead>
+                    </table>
+            
+                </div>
+            </div>
+        </div>    
 </template>
 
 <script>
+import axios from "axios"
 export default {
+    data: ()=> ({
+        usuarios: null
+    }),
+    created: function (){
+        axios.get('https://jsonplaceholder.typicode.com/users')
+        .then(res=> {
+            this.usuarios = res.data
+            console.log(this.usuarios.adress)
+
+        })
+    }
     
 }
 </script>
 
 <style>
- table, th, td {
-  border: 1px solid rgb(153, 153, 153);
-  border-collapse: collapse;
+.tituloTable{  
+   text-align: center;
+   padding: 50px;
+   font-family: 'Montserrat', sans-serif;
+   color: #c3fada;
+    
 }
 th, td {
-  padding: 15px;
+  padding: 20px;
+  color: rgb(105, 105, 105);
+}
+
+.tabela{
+    padding-bottom: 50px;
+    background-color: white;
 }
 
 </style>
