@@ -25,7 +25,9 @@
             <img src="../assets/usuario5.png" class="mx-auto d-block" alt="" width="200" height="200" id="png3">
           </div>
 
-          <img src="../assets/mesa.png" class="mx-auto d-block" alt="" width="400" height="400" id="png3">
+    
+          <img src="../assets/mesa.png" class="mx-auto d-block" alt="" width="400" height="400" id="png4">
+        
 
         </div>
 
@@ -103,6 +105,7 @@ export default {
     font-size: 45px;
     font-family: 'Montserrat', sans-serif;
     color:#c3fada;
+    margin-left: 150px;
     
   }
 
@@ -120,7 +123,4 @@ export default {
     padding-left: 100px;
   }
 
-  #png{
-
-  }
 </style>
