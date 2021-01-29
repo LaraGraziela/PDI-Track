@@ -5,10 +5,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-        <div class="row">
+        <div class="row" id="usuarios">
             <div class="col-sm-12">
                 <div class="container">
-                    <h1 class="tituloTable">Customers Cadastrados</h1>
+                    <h1 class="tituloTable">USERS</h1>
 
                     <table class="tabela table-bordered formulario" style="width:100%">
                         <thead>
@@ -22,7 +22,7 @@
                             <th>Company</th>
                         </thead>
                         <thead v-for="(user,index) in usuarios" :key="index">
-                            <td></td>
+                            <td>{{user.id}}</td>
                             <td>{{user.name}}</td>
                             <td>{{user.username}}</td>
                             <td>{{user.email}}</td>

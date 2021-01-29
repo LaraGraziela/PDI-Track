@@ -4,13 +4,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-  
+   
   </head>
     <div class="row">
       
         <div class="col-sm-6">
-          <h2 class="titulo">Cadastro de Costumer </h2>
+          <h2 class="titulo">CADASTRO DE COSTUMER </h2>
 
           <div class="box">
             <img src="../assets/usuario1.png" class="mx-auto d-block" alt="" width="200" height="200" id="png">
@@ -105,7 +104,7 @@ export default {
     font-size: 45px;
     font-family: 'Montserrat', sans-serif;
     color:#c3fada;
-    margin-left: 150px;
+    margin-left: 131px;
     
   }
 
