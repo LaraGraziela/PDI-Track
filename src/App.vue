@@ -15,27 +15,26 @@
           <li class="nav-item">
             <a class="nav-link" href="#fotos">Photos</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
       </ul>
-    <HelloWorld/>
-    <Table/>
-    <TableAll/>
-    <TablePhotos/>
+      <div class="container-fluid">
+          <Form/>
+          <Table/>
+      </div>
+      <TableAll/>
+      <TablePhotos/>
 
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Table from './components/Table.vue'
+import Form from './components/Form'
+import Table from './components/Table'
 import TableAll from './components/TableAll'
 import TablePhotos from './components/TablePhotos'
 
 export default {
   
   components: {
-    HelloWorld,
+    Form,
     Table,
     TableAll,
     TablePhotos

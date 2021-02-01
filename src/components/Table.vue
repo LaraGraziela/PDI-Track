@@ -7,7 +7,7 @@
     </head>
         <div class="row" id="usuarios">
             <div class="col-sm-12">
-                <div class="container">
+                <div class="container-fluid">
                     <h1 class="tituloTable">USERS</h1>
 
                     <table class="tabela table-bordered formulario" style="width:100%">
